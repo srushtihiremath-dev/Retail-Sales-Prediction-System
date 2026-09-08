@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retail Prediction</title>
+</head>
+
+<body>
+
+<h2>Retail Sales Prediction</h2>
+
+<form method="post" action="/predict">
+
+    Store ID: <input type="text" name="store"><br><br>
+    Feature Value: <input type="text" name="feature"><br><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+{% if prediction %}
+<h3>Predicted Sales: {{ prediction }}</h3>
+{% endif %}
+
+</body>
+</html>
